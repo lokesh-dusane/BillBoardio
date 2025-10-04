@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard - Billboardio</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1><img src="../images/logo.png" width="150" height="70" alt="Billboardio"></h1>
+    <ul class="nav-links">
+      <li><a href="#" id="userName"></a></li>
+      <li><button class="btn-logout" id="logoutBtn">Logout</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Owner Menu</h3>
+        <ul>
+          <li><a href="#" class="active" data-section="overview">Dashboard</a></li>
+          <li><a href="#" data-section="billboards">My Billboards</a></li>
+          <li><a href="#" data-section="add-billboard">Add Billboard</a></li>
+          <li><a href="#" data-section="bookings">Booking Requests</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-main">
+        <div id="alertContainer"></div>
+
+        <!-- Overview Section -->
+        <div id="overview" class="section">
+          <div class="welcome-section">
+            <h2>Welcome, <span id="ownerName"></span>!</h2>
+            <p>Manage your billboards and booking requests</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" id="totalBillboards">0</div>
+              <div class="stat-label">Total Billboards</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="availableBillboards">0</div>
+              <div class="stat-label">Available</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="pendingBookings">0</div>
+              <div class="stat-label">Pending Requests</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Billboards Section -->
+        <div id="billboards" class="section hidden">
+          <div class="card">
+            <h2>My Billboards</h2>
+            <div id="billboardsList" class="grid"></div>
+          </div>
+        </div>
+
+        <!-- Add Billboard Section -->
+        <div id="add-billboard" class="section hidden">
+          <div class="card">
+            <h2>Add New Billboard</h2>
+            <form id="addBillboardForm">
+              <div class="form-group">
+                <label for="title">Billboard Title</label>
+                <input type="text" id="title" required>
+              </div>
+
+              <div class="form-group">
+                <label for="location">City/Location</label>
+                <input type="text" id="location" required>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Full Address</label>
+                <input type="text" id="address" required>
+              </div>
+
+              <div class="form-group">
+                <label for="size">Size</label>
+                <select id="size" required>
+                  <option value="">Select Size</option>
+                  <option value="14x48">14x48 ft</option>
+                  <option value="10x30">10x30 ft</option>
+                  <option value="20x60">20x60 ft</option>
+                  <option value="12x24">12x24 ft</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="price">Price per Day (INR ₹)</label>
+                <input type="number" id="price" required min="0" placeholder="Enter price in rupees">
+              </div>
+
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability" required>
+                  <option value="available">Available</option>
+                  <option value="maintenance">Under Maintenance</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="image">Billboard Image</label>
+                <input type="file" id="image" accept="image/*">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Add Billboard</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bookings Section -->
+        <div id="bookings" class="section hidden">
+          <div class="card">
+            <h2>Booking Requests</h2>
+            <div class="table-container">
+              <table id="bookingsTable">
+                <thead>
+                  <tr>
+                    <th>Billboard</th>
+                    <th>Advertiser</th>
+                    <th>Dates</th>
+                    <th>Price (₹)</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="bookingsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/owner.js"></script>
+</body>
+</html>

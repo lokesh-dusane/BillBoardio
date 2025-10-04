@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Billboardio</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1><img src="../images/logo.png" width="150" height="70" alt="Billboardio">Billboardio Admin</h1>
+    <ul class="nav-links">
+      <li><a href="#" id="userName"></a></li>
+      <li><button class="btn-logout" id="logoutBtn">Logout</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Admin Menu</h3>
+        <ul>
+          <li><a href="#" class="active" data-section="statistics">Statistics</a></li>
+          <li><a href="#" data-section="users">Manage Users</a></li>
+          <li><a href="#" data-section="billboards">Manage Billboards</a></li>
+          <li><a href="#" data-section="bookings">All Bookings</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-main">
+        <div id="alertContainer"></div>
+
+        <!-- Statistics Section -->
+        <div id="statistics" class="section">
+          <div class="welcome-section">
+            <h2>Admin Dashboard</h2>
+            <p>Overview of platform statistics and activities</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" id="totalUsers">0</div>
+              <div class="stat-label">Total Users</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="totalOwners">0</div>
+              <div class="stat-label">Billboard Owners</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="totalAdvertisers">0</div>
+              <div class="stat-label">Advertisers</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="totalBillboards">0</div>
+              <div class="stat-label">Total Billboards</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="approvedBillboards">0</div>
+              <div class="stat-label">Approved Billboards</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="totalBookings">0</div>
+              <div class="stat-label">Total Bookings</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Users Section -->
+        <div id="users" class="section hidden">
+          <div class="card">
+            <h2>Manage Users</h2>
+            <div class="table-container">
+              <table id="usersTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Company</th>
+                    <th>Joined</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="usersTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Billboards Section -->
+        <div id="billboards" class="section hidden">
+          <div class="card">
+            <h2>Manage Billboards</h2>
+            <div class="table-container">
+              <table id="billboardsTable">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Location</th>
+                    <th>Owner</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Approved</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="billboardsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bookings Section -->
+        <div id="bookings" class="section hidden">
+          <div class="card">
+            <h2>All Bookings</h2>
+            <div class="table-container">
+              <table id="bookingsTable">
+                <thead>
+                  <tr>
+                    <th>Billboard</th>
+                    <th>Advertiser</th>
+                    <th>Owner</th>
+                    <th>Dates</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="bookingsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billboardio</title>
+  <meta name="title" content="Adex">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+
+</head>
+<!-- Navigation bar -->
+<body>
+  <header id="top" class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+       <img src="../images/logo.png" width="250" height="80" alt="">
+        
+       
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="../images/logo.png" width="150" height="35" alt="billboardio">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#top" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#project" class="navbar-link">Advertise</a>
+          </li>
+
+          <li>
+            <a href="#testimonials" class="navbar-link">Testimonials</a>
+          </li>
+
+          <li>
+            <a href="#about-content" class="navbar-link">About</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+<!-- Navigation bar -->
+        <div class="wrapper">
+          <a href="mailto:sampleemail1304@gmail.com.com" class="contact-link">bilboardio@gmail.com</a>
+
+          <a href="tel:9031138044" class="contact-link">+91 90311 38044</a>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-dribbble"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+     
+      <a href="../pages/signup.html" class="btn btn-primary">Login</a>
+
+      <script>
+        // Navbar link scroll behavior
+        document.addEventListener('DOMContentLoaded', function() {
+          // Login button opens signup page
+          const loginBtn = document.querySelector('.btn.btn-primary[href="signup.html"]');
+          if (loginBtn) {
+            loginBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              window.location.href = 'signup.html';
+            });
+          }
+        });
+      </script>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Streamlining advertising collaborations with precision.</h1>
+
+            <p class="hero-text">
+              Empowering advertisers and billboard owners with seamless communication, tailored solutions, and enduring partnerships to propel advertising endeavors forward.
+            </p>
+
+            <div class="btn-wrapper">
+
+              <a href="../pages/explore.html" class="btn btn-primary">Explore Now</a>
+
+              <a href="#contact" class="btn btn-outline">Contact Us</a>
+
+            </div>
+
+          </div>
+
+          <div class="hero-slider" data-slider>
+
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="../images/ad1.jpeg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <div class="hero-card">
+                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                      <img src="../images/ad3.jpg" width="575" height="550" alt="hero banner"
+                        class="img-cover">
+                    </figure>
+
+                    <button class="play-btn" aria-label="play adex intro">
+                      <ion-icon name="play" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="../images/ad2.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+              </ul>
+            </div>
+
+            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" aria-labelledby="service-label">
+        <div class="container">
+
+          <p class="section-subtitle" id="service-label">What We Do?</p>
+
+          <h2 class="h2 section-title">
+            The service we offer is specifically designed to meet your needs.
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <h3 class="h4 card-title">24/7 Support</h3>
+
+                <p class="card-text">
+                  Experience peace of mind with our 24/7 support. Our dedicated team is always here to assist you, ensuring smooth operations round the clock. Your satisfaction is our priority
+                </p>
+
+                
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <h3 class="h4 card-title">Secure Payments</h3>
+
+                <p class="card-text">
+                  Rest assured with our secure payment system. Your transactions are encrypted and protected, ensuring peace of mind for you and your clients. Trust us for safe payment.
+                </p>
+
+               
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="settings-sharp" aria-hidden="true"></ion-icon>
+                </div>
+
+                <h3 class="h4 card-title">Customizable Advertising Spaces</h3>
+
+                <p class="card-text">
+                  flexible options for advertisers to choose the size and location of billboards.advertisers have the flexibility to select the perfect location.
+                </p>
+
+               
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <h3 class="h4 card-title">Booking Calendar</h3>
+
+                <p class="card-text">
+                  A streamlined booking calendar system allows advertisers to view real-time availability and schedule their ad directly through the website, thus saving valuable time for our users.
+                </p>
+
+               
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about" aria-labelledby="about-label" id = "about-content">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="../images/about-banner.png" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle" id="about-label">Why Choose Us?</p>
+
+            <h2 class="h2 section-title">
+              We bring solutions to make life easier for our clients.
+            </h2>
+
+            <ul>
+
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <span class="span h5"> Targeted Advertising</span>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Unlock the power of precision marketing with our expertise in targeted advertising. Our platform offers advanced features allowing advertisers to tailor their campaigns based on size and location, ensuring maximum impact and engagement with their desired audience.
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <span class="span h5">Exceptional Customer Service</span>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Experience unparalleled support with our exceptional customer service. From responsive email and phone assistance to a commitment to resolving queries within 24 hours, we prioritize your satisfaction. Choose us for peace of mind, knowing that our dedicated team is here to support you every step of the way
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <span class="span h5">Innovative Technology Solutions</span>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Discover our cutting-edge technology solutions designed to revolutionize your advertising experience. With dynamic content optimization, and real-time analytics, our platform ensures your ads reach the right audience at the right time. Experience the future of advertising with our user-friendly interface and advanced features tailored to maximize your campaign's effectiveness.
+                  </p>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+      <section class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="../images/feature-banner.png" width="800" height="531" loading="lazy" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <p class="section-subtitle" id="feautre-label">Our Solutions</p>
+
+            <h2 class="h2 section-title">
+              Empower your spending with our platform's effortless control over ad investments.
+            </h2>
+
+            <p class="section-text">
+              Targeted advertising, real-time analytics, and responsive support for optimized campaigns. Elevate your advertising strategy with our comprehensive platform
+            </p>
+
+            <ul class="feature-list">
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="cube" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Content Management System
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="compass" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Geolocation Targeting
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="speedometer" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Realtime Availability of Billboards
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Campaign Templates
+                  </span>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- Advertise-->
+      <section class="section project" aria-labelledby="project-label" id = "project">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Check out some of our Popular Billboards.
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="../images/h1.jpg" width="560" height="350" loading="lazy"
+                    alt="h1" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">My Hoardings</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus nihil similique.
+                  </p>
+
+                  
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="../images/h2.jpg" width="560" height="350" loading="lazy"
+                    alt="Nullam id dolor elit id nibh" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Dream Advertising</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, laboriosam! Modi, soluta nemo!
+                  </p>
+
+               
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="../images/h3.jpg" width="560" height="350" loading="lazy"
+                    alt="Ultricies fusce porta elit" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">360 Hoardings</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, exercitationem. Voluptatem, provident ratione.
+                  </p>
+
+                
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- Testimonials Section -->
+      <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-label" style="background-color: white;">   
+        <div class="container">
+          <h2 class="h2 section-title" id="testimonials-label" style="color: var(--violet-blue-crayola);">What Our Clients Say</h2>
+          <ul class="grid-list">
+            <li>
+              <div class="project-card" style="background: var(--white); box-shadow: var(--shadow-2);">
+                <div class="card-content">
+                  <h3 class="h3" style="color: var(--charcoal);">Amit Sharma</h3>
+                  <p class="card-text">“Billboardio made advertising so easy and effective. The team was responsive and the platform is user-friendly!”</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-card" style="background: var(--white); box-shadow: var(--shadow-2);">
+                <div class="card-content">
+                  <h3 class="h3" style="color: var(--charcoal);">Priya Verma</h3>
+                  <p class="card-text">“Great experience! Our campaign reached the right audience and the support was excellent.”</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project-card" style="background: var(--white); box-shadow: var(--shadow-2);">
+                <div class="card-content">
+                  <h3 class="h3" style="color: var(--charcoal);">Rahul Mehta</h3>
+                  <p class="card-text">“Highly recommend Billboardio for anyone looking for hassle-free outdoor advertising.”</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+
+      <!-- Contact Section -->
+      <section class="section contact" id="contact" aria-labelledby="contact-label" style="background-color: var(--lavender-web);">
+        <div class="container">
+          <h2 class="h2 section-title" id="contact-label" style="color: var(--violet-blue-crayola);">Contact Us</h2>
+          <form class="contact-form" action="mailto:sampleemail1304@gmail.com" method="POST" enctype="text/plain" style="max-width: 500px; margin: 0 auto; background: var(--white); padding: 2rem; border-radius: var(--radius-10); box-shadow: var(--shadow-2);">
+            <div style="margin-bottom: 1.5rem;">
+              <label for="name" class="h5" style="color: var(--charcoal);">Name</label>
+              <input type="text" id="name" name="name" required style="padding: 0.8rem; border-radius: var(--radius-6); border: 1px solid var(--cadet-blue-crayola); width: 100%;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <label for="email" class="h5" style="color: var(--charcoal);">Email</label>
+              <input type="email" id="email" name="email" required style="padding: 0.8rem; border-radius: var(--radius-6); border: 1px solid var(--cadet-blue-crayola); width: 100%;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <label for="message" class="h5" style="color: var(--charcoal);">Message</label>
+              <textarea id="message" name="message" rows="4" required style="padding: 0.8rem; border-radius: var(--radius-6); border: 1px solid var(--cadet-blue-crayola); width: 100%;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Join our community by using our services and grow your business.
+          </h2>
+
+          <a href="#" class="btn btn-primary">Connect</a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="../images/logo.png" width="150" height="70" alt="Billboardio">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2024 billboardio. <br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-dribbble"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            
+          </address>
+        </li>
+
+        <li>
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnqGMXJNRNzRVHctVgBTMXMltTBFTpBVplPgKXGhgqjfWJbSwBpkwSlTKxmDBKJwVWCKdC" class="footer-link" onclick="window.location.href = this.getAttribute('href');">billboardio@gmail.com</a>
+        </li>
+
+        <li>
+          <a href="tel:+919031138044" class="footer-link">+91 90311 38044</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">About Us</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Services</a>
+        </li>
+
+        
+        <li>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our Newsletter</p>
+
+        <p class="footer-text">
+          Subscribe to our newsletter to get our news & deals delivered to you.
+        </p>
+
+        <form action="" class="input-wrapper">
+          <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+
+          <button type="submit" class="submit-btn">Join</button>
+        </form>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+ 
+  <script type="module" src="../js/script.js"></script>
+
+  <!-- 
+    - ionicon API 
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

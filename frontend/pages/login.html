@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Billboardio</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <style>
+    .auth-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 2rem;
+    }
+
+    .auth-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .auth-card h2 {
+      text-align: center;
+      color: #667eea;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .auth-card .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .auth-card .btn {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #666;
+    }
+
+    .auth-footer a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .auth-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .demo-credentials {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .demo-credentials h4 {
+      margin-bottom: 0.5rem;
+      color: #667eea;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2><img src="../images/logo.png" width="150" height="70" alt="Billboardio"><br>Login to Billboardio</h2>
+      <div id="alertContainer"></div>
+
+  <!-- Demo credentials info -->
+  <!-- <div class="demo-credentials">
+    <h4>Demo Accounts:</h4>
+    <p><strong>Admin:</strong> admin@billboardio.com / admin123</p>
+    <p><strong>Owner:</strong> owner@test.com / owner123</p>
+    <p><strong>Advertiser:</strong> advertiser@test.com / adv123</p>
+  </div> -->
+
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+
+  <div class="auth-footer">
+    Don't have an account? <a href="signup.html">Sign up here</a><br>
+    <a href="admin-login.html" style="color: #dc3545; font-weight: bold;">Admin Login</a>
+  </div>
+</div>
+</div>
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>
+```

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertiser Dashboard - Billboardio</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1><img src="../images/logo.png" width="250" height="80" alt="">Billboardio</h1>
+    <ul class="nav-links">
+      <li><a href="#" id="userName"></a></li>
+      <li><button class="btn-logout" id="logoutBtn">Logout</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3>Advertiser Menu</h3>
+        <ul>
+          <li><a href="#" class="active" data-section="browse">Browse Billboards</a></li>
+          <li><a href="#" data-section="my-bookings">My Bookings</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="dashboard-main">
+        <div id="alertContainer"></div>
+
+        <!-- Browse Billboards Section -->
+        <div id="browse" class="section">
+          <div class="welcome-section">
+            <h2>Find the Perfect Billboard</h2>
+            <p>Browse and filter available billboards for your advertising needs</p>
+          </div>
+
+          <!-- Filter Section -->
+          <div class="filter-section">
+            <h3>Filter Billboards</h3>
+            <div class="filter-row">
+              <div class="form-group">
+                <label for="filterLocation">Location</label>
+                <input type="text" id="filterLocation" placeholder="Enter city">
+              </div>
+
+              <div class="form-group">
+                <label for="filterMinPrice">Min Price (₹)</label>
+                <input type="number" id="filterMinPrice" placeholder="0">
+              </div>
+
+              <div class="form-group">
+                <label for="filterMaxPrice">Max Price (₹)</label>
+                <input type="number" id="filterMaxPrice" placeholder="10000">
+              </div>
+
+              <div class="form-group">
+                <label for="filterSize">Size</label>
+                <select id="filterSize">
+                  <option value="">All Sizes</option>
+                  <option value="14x48">14x48 ft</option>
+                  <option value="10x30">10x30 ft</option>
+                  <option value="20x60">20x60 ft</option>
+                  <option value="12x24">12x24 ft</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-primary" id="applyFiltersBtn">Apply Filters</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billboards Grid -->
+          <div id="billboardsList" class="grid"></div>
+        </div>
+
+        <!-- My Bookings Section -->
+        <div id="my-bookings" class="section hidden">
+          <div class="card">
+            <h2>My Booking Requests</h2>
+            <div class="table-container">
+              <table id="bookingsTable">
+                <thead>
+                  <tr>
+                    <th>Billboard</th>
+                    <th>Location</th>
+                    <th>Dates</th>
+                    <th>Total Price (₹)</th>
+                    <th>Status</th>
+                    <th>Owner Contact</th>
+                  </tr>
+                </thead>
+                <tbody id="bookingsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Request Booking</h3>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+      </div>
+      <form id="bookingForm">
+        <input type="hidden" id="billboardId">
+        <input type="hidden" id="ownerId">
+        
+        <div class="form-group">
+          <label for="startDate">Start Date</label>
+          <input type="date" id="startDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="endDate">End Date</label>
+          <input type="date" id="endDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message to Owner</label>
+          <textarea id="message" rows="4" placeholder="Tell the owner about your campaign..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <strong>Estimated Price: ₹<span id="estimatedPrice">0</span></strong>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method</label>
+          <select id="paymentMethod" required>
+            <option value="">Select payment method</option>
+            <option value="UPI">UPI</option>
+            <option value="Cash After Use">Cash After Use</option>
+            <option value="Debit Card">Debit Card</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Booking Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/advertiser.js"></script>
+</body>
+</html>
