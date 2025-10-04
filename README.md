@@ -46,6 +46,20 @@ A full-stack web application connecting billboard owners with advertisers. Built
 - MongoDB (local or Atlas)
 - npm or yarn
 
+.env.example
+
+Create a file named .env.example in your project folder.
+
+Copy all the variable names from .env without the values, like this:
+
+DB_URL=
+API_KEY=
+PORT=
+
+
+"Copy .env.example to .env and fill in your own values."
+
+
 ### Setup Steps
 
 1. **Clone the repository**
